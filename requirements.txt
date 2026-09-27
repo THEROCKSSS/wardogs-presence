@@ -1,0 +1,6 @@
+mss>=10.0.0
+psutil>=7.0.0
+pytesseract>=0.3.13
+pillow>=11.0.0
+pystray>=0.19.5
+requests>=2.32.0

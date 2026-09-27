@@ -1,0 +1,41 @@
+# Secrets and machine-local config — never commit
+config.json
+state.json
+.env
+
+# Runtime output
+*.log
+logs/
+last_status.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Build artefacts
+build/
+dist/
+node_modules/
+*.spec.bak
+
+# Test scratch
+.pytest_cache/
+tests/__pycache__/
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# Local verification output — screenshots of the real desktop, never commit
+output/
+
+# Local build toolchain
+.tools/
+frontend/node_modules/
+frontend/dist/
+assets/engine.zip

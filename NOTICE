@@ -1,0 +1,63 @@
+WARDOGS Presence
+Copyright (c) 2026 Owen (THEROCKSSS)
+
+This product is built on, and includes code derived from:
+
+    wardogs-discord-status
+    https://github.com/msmcpeake/wardogs-discord-status
+    Copyright (c) 2026 msmcpeake
+    Licensed under the MIT License
+
+The following were ported from that project and are used under its MIT
+licence. The original MIT copyright notice is preserved verbatim in LICENSE.
+
+Derived work includes:
+  - The screen-capture and OCR approach (mss + pytesseract), and the measured
+    preprocessing decision not to upscale.
+  - The tuning defaults for the three capture regions (CAPTURE_REGION,
+    TEAM_ICON_REGION, SCORE_REGION) and MONITOR_INDEX.
+  - Faction detection by circular-mean hue sampling of the HUD icon.
+  - Scoreboard reading, including the "exactly three digits or discard the
+    whole read" strictness.
+  - The text parsing expressions for the pause-menu server panel, the queue
+    bar (with its countdown deliberately excluded), and the menu/splash
+    not-in-game detection.
+  - The debounce rule (a reading must occur twice in a row), the heartbeat,
+    the score-update throttle, and the server/team-independent tracking.
+  - The tray-icon approach and the region-preview drag-to-set interaction.
+
+Changes made in this project, which are NOT from the upstream original:
+  - Transport moved from a Discord bot token to an incoming webhook, including
+    per-execution username/avatar_url identity, message re-creation on identity
+    change, and recovery when a stored message id is gone.
+  - A first-run setup wizard replacing manual .env and region_preview.py steps.
+  - Configuration and state stored in %APPDATA% rather than beside the script.
+  - Bundled Tesseract resolution, so no system install is required.
+  - One bug fix in the region-matching expression: upstream's REGION_RE
+    matched the queue countdown's parentheses and could read "(0:42)" as a
+    region name.
+
+No endorsement by the upstream author is implied.
+
+--------------------------------------------------------------------------
+
+This project bundles the following third-party component:
+
+    Tesseract OCR
+    https://github.com/tesseract-ocr/tesseract
+    Copyright (c) 2006-2024 Google LLC and contributors
+    Licensed under the Apache License, Version 2.0
+
+    Distributed as the UB-Mannheim Windows build
+    https://github.com/UB-Mannheim/tesseract
+    Licensed under the Apache License, Version 2.0
+
+    The Apache License, Version 2.0 text is included in the distributed build
+    as LICENSE-tesseract.txt. Language data (eng.traineddata) is distributed
+    under the same terms.
+
+--------------------------------------------------------------------------
+
+Python dependencies are distributed as part of the frozen application and
+retain their own licences. Tray icon artwork originates from the upstream
+project and is used under the MIT licence noted above.
