@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wardogs-presence"
-version = "1.1.0"
+version = "1.1.1"
 description = "Publish your live WARDOGS server, queue, faction and score to Discord via a webhook."
 readme = "README.md"
 requires-python = ">=3.10"

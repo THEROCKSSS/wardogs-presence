@@ -7,6 +7,6 @@ through an incoming webhook under the player's own name.
 Built on msmcpeake/wardogs-discord-status (MIT). See NOTICE.
 """
 
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 
 APP_TITLE = "WARDOGS Presence"

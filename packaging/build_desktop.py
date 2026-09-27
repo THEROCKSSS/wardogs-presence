@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 import shutil
 import subprocess
@@ -9,6 +10,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+VERSION = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))["version"]
 TOOLS = ROOT / ".tools"
 ENGINE = TOOLS / "engine-dist" / "WardogsPresence"
 
@@ -63,7 +65,7 @@ def build() -> None:
 
     run([npm, "ci"], env=env)
     run([npm, "run", "dist:win"], env=env)
-    final = ROOT / "dist" / "WardogsPresence-1.1.0-win-x64.exe"
+    final = ROOT / "dist" / f"WardogsPresence-{VERSION}-win-x64.exe"
     if not final.is_file():
         raise RuntimeError("Electron Builder did not produce the portable EXE")
     print(f"Release candidate: {final} ({final.stat().st_size / 1_048_576:.1f} MiB)")

@@ -1,5 +1,17 @@
 # Getting started with WARDOGS Presence
 
+Watch the [narrated setup demo](https://therocksss.github.io/wardogs-presence/#demo) or read its [transcript](media/VIDEO-TRANSCRIPT.md). The demo and previews use fictional example data.
+
+## What your Discord channel will show
+
+The app creates one message per enabled webhook and edits it as your status changes. These illustrative previews are rendered from the app's message-building code; Discord's emoji and spacing may vary.
+
+![Illustrative match status with server ID and scores](media/status-match.png)
+
+![Illustrative queue status with position](media/status-queue.png)
+
+![Illustrative out-of-game status](media/status-offline.png)
+
 ## 1. Download the one EXE
 
 On Windows 10 or 11, download `WardogsPresence-*-win-x64.exe` from the project's [GitHub Releases](https://github.com/THEROCKSSS/wardogs-presence/releases). Keep it anywhere you like and double-click it. No installer, Python, Tesseract, or browser server is needed. Windows may warn about an unsigned app; inspect the publisher and SHA-256 digest on the release before deciding whether to run it.
