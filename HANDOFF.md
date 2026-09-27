@@ -33,12 +33,17 @@ voice profile source files are not part of this repository.
   loaded from `file:`, bridge capture and OCR succeeded, two displays were
   detected, and the in-app guide loaded the 78.1-second bundled MP4 and all
   three status preview images.
+- Hosted 1.1.1 release run 36313663379 and Pages run 36313661354 passed.
+  The EXE downloaded from GitHub Releases (169,004,686 bytes, SHA-256
+  `491899c8517fc2b4c7ef1a161b5200797a6dc32ff11f26eb7f5f484001c91a71`)
+  passed the same packaged smoke with isolated AppData. Its hash matches the
+  release checksum and GitHub's asset digest. The EXE is unsigned and remains
+  a prerelease while live-game OCR and clean-PC verification are outstanding.
 
 ## Remaining validation
 
 - Run the final EXE on a clean Windows machine without the developer tools.
 - Calibrate and verify OCR in a live War Dogs match.
-- Verify the 1.1.1 hosted release build and download after publication.
 
 Keep webhook URLs, AppData config, captured screens, and local build outputs out
 of commits and issues.
